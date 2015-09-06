@@ -1,0 +1,13 @@
+F:\Unity Projects\New Unity Project\Temp\UnityVS_bin\Debug\Assembly-CSharp-firstpass.dll
+F:\Unity Projects\New Unity Project\Temp\UnityVS_bin\Debug\Assembly-CSharp-firstpass.pdb
+F:\Unity Projects\New Unity Project\Temp\UnityVS_bin\Debug\UnityEditor.dll
+F:\Unity Projects\New Unity Project\Temp\UnityVS_bin\Debug\UnityEditor.iOS.Extensions.Xcode.dll
+F:\Unity Projects\New Unity Project\Temp\UnityVS_bin\Debug\UnityEngine.dll
+F:\Unity Projects\New Unity Project\Temp\UnityVS_bin\Debug\UnityEngine.UI.dll
+F:\Unity Projects\New Unity Project\Temp\UnityVS_bin\Debug\UnityEngine.xml
+F:\Unity Projects\New Unity Project\Temp\UnityVS_bin\Debug\UnityEditor.xml
+F:\Unity Projects\New Unity Project\Temp\UnityVS_bin\Debug\UnityEngine.UI.xml
+F:\Unity Projects\New Unity Project\Temp\UnityVS_bin\Debug\UnityEditor.iOS.Extensions.Xcode.xml
+F:\Unity Projects\New Unity Project\obj\Debug\UnityVS.New Unity Project.CSharp.Plugins.csprojResolveAssemblyReference.cache
+F:\Unity Projects\New Unity Project\obj\Debug\Assembly-CSharp-firstpass.dll
+F:\Unity Projects\New Unity Project\obj\Debug\Assembly-CSharp-firstpass.pdb
