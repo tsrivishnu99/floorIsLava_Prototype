@@ -7,7 +7,7 @@ public class player_InputHandler_v2 : MonoBehaviour {
     private bool leftClamped;
     //private bool rightClamped;
     private Vector3 leftHitPoint;
-    private Vector3 rightHitPoint;
+    //private Vector3 rightHitPoint;
     public Camera fpsCam;
     RaycastHit hit;
     public GameObject RopeElement;
@@ -21,23 +21,12 @@ public class player_InputHandler_v2 : MonoBehaviour {
         leftHitPoint.x = 0;
         leftHitPoint.y = 0;
         leftHitPoint.z = 0;
-        rightHitPoint = leftHitPoint;
+        //rightHitPoint = leftHitPoint;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 	Cursor.lockState = CursorLockMode.Locked;
-
-        if(Input.GetKey(KeyCode.Space))
-        {
-            player.AddForce(fpsCam.transform.forward * 2.0f, ForceMode.Impulse);
-        }
-
-        if(Input.GetKey(KeyCode.LeftControl))
-        {
-            player.AddForce(-fpsCam.transform.forward * 0.5f, ForceMode.Impulse);
-        }
-
 
         // Handle left button click, [ Find the point of collision and store the point ]
         if (Input.GetMouseButtonDown(0))
@@ -45,7 +34,6 @@ public class player_InputHandler_v2 : MonoBehaviour {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit) && leftClamped == false)
             {
-                leftClamped = true;
                 leftHitPoint = hit.point - transform.position;
                 leftHitPoint.Normalize();
                 //player.AddForce(leftHitPoint * 5.0f, ForceMode.Impulse);
@@ -59,6 +47,7 @@ public class player_InputHandler_v2 : MonoBehaviour {
 
                 if (totalRopeUnits < 40)
                 {
+					leftClamped = true;
                     Rope = new GameObject[totalRopeUnits + 1];
 
                     GameObject ropeUnit, LastUnit;
@@ -113,6 +102,15 @@ public class player_InputHandler_v2 : MonoBehaviour {
 
     void FixedUpdate()
     {
-       
+		if(Input.GetKey(KeyCode.Space))
+		{
+			player.AddForce(fpsCam.transform.forward * 5.0f, ForceMode.Impulse);
+		}
+		
+		if(Input.GetKey(KeyCode.LeftControl))
+		{
+			player.AddForce(-fpsCam.transform.forward * 0.5f, ForceMode.Impulse);
+		}
+
     }
 }
