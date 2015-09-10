@@ -1,10 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\player_InputHandler_v3.cs">
     <Files>
-      <File FileName="Assets\Scripts\player_InputHandler_v2.cs" Line="112" Column="73" />
+      <File FileName="Assets\Scripts\player_InputHandler_v2.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\player_InputHandler_v3.cs" Line="132" Column="6" />
-      <File FileName="Assets\Scripts\CheckPoint.cs" Line="29" Column="2" />
+      <File FileName="Assets\Scripts\CheckPoint.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

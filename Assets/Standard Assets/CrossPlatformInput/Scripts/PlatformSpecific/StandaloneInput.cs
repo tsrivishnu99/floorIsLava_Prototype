@@ -7,7 +7,7 @@ namespace UnityStandardAssets.CrossPlatformInput.PlatformSpecific
     {
         public override float GetAxis(string name, bool raw)
         {
-            return raw ? Input.GetAxisRaw(name) : Input.GetAxis(name);
+            return raw ? Input.GetAxisRaw(name + "0") : Input.GetAxis(name + "0");
         }
 
 

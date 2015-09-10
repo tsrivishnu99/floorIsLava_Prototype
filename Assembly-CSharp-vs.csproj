@@ -47,11 +47,14 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\CheckPoint.cs" />
+     <Compile Include="Assets\Scripts\WarriorCollision.cs" />
      <Compile Include="Assets\Scripts\cameraController.cs" />
      <Compile Include="Assets\Scripts\player_Basic.cs" />
      <Compile Include="Assets\Scripts\player_InputHandler.cs" />
      <Compile Include="Assets\Scripts\player_InputHandler_v2.cs" />
      <Compile Include="Assets\Scripts\player_InputHandler_v3.cs" />
+     <Compile Include="Assets\Warrior Pack Bundle 2 FREE\Code\SmoothFollow.cs" />
+     <Compile Include="Assets\Warrior Pack Bundle 2 FREE\Code\WarriorAnimationDemo.cs" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />
      <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
