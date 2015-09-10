@@ -67,13 +67,13 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
- <HintPath>D:/floorIsLava_Prototype/Assets/UnityVS/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
+ <HintPath>D:/Prototypes/floorIsLava_Prototype/Assets/UnityVS/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
  </Reference>
  <Reference Include="SyntaxTree.VisualStudio.Unity.Messaging">
- <HintPath>D:/floorIsLava_Prototype/Assets/UnityVS/Editor/SyntaxTree.VisualStudio.Unity.Messaging.dll</HintPath>
+ <HintPath>D:/Prototypes/floorIsLava_Prototype/Assets/UnityVS/Editor/SyntaxTree.VisualStudio.Unity.Messaging.dll</HintPath>
  </Reference>
  <Reference Include="UnityVS.VersionSpecific">
- <HintPath>D:/floorIsLava_Prototype/Assets/UnityVS/Editor/UnityVS.VersionSpecific.dll</HintPath>
+ <HintPath>D:/Prototypes/floorIsLava_Prototype/Assets/UnityVS/Editor/UnityVS.VersionSpecific.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
