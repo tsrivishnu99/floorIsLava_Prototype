@@ -4,6 +4,7 @@ using System.Collections;
 public class player_InputHandler_v3 : MonoBehaviour {
 
 	private Rigidbody player;
+    private int playerNumber =0;
 	private bool leftClamped;
 	//private bool rightClamped;
 	private Vector3 leftHitPoint;
@@ -22,16 +23,32 @@ public class player_InputHandler_v3 : MonoBehaviour {
 		leftHitPoint.y = 0;
 		leftHitPoint.z = 0;
 		startPos = this.transform.position;
+        playerNumber = this.gameObject.GetComponent<player_movementHandler_v2>().playerNumber;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		Cursor.lockState = CursorLockMode.Locked;
-		
+		//Cursor.lockState = CursorLockMode.Locked;
+
+        //Debug.Log(playerNumber.ToString());
+
+        if (Input.GetAxis("TriggerL" + playerNumber.ToString()) != 0.0f)
+        {
+            Ray bulletPath = new Ray(fpsCam.transform.position, fpsCam.transform.forward);
+            if (Physics.Raycast(bulletPath, out hit) && hit.collider.tag == "Player")
+            {
+                hit.collider.gameObject.GetComponent<player_InputHandler_v3>().CutRope();
+                hit.collider.gameObject.GetComponent<Rigidbody>().AddForce(fpsCam.transform.forward * 50.0f, ForceMode.Impulse);
+            }
+        }
+
 		// Handle left button click, [ Find the point of collision and store the point ]
-		if (Input.GetMouseButtonDown(0))
-		{
-			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+		if (Input.GetAxis("TriggerR" + playerNumber.ToString()) != 0.0f)
+        {
+           
+
+			Ray ray = new Ray(fpsCam.transform.position, fpsCam.transform.forward);
+
 			if (Physics.Raycast(ray, out hit) && leftClamped == false && hit.collider.name.Contains("Building"))
 			{
 				leftHitPoint = hit.point - transform.position;
@@ -94,44 +111,49 @@ public class player_InputHandler_v3 : MonoBehaviour {
 		}
 		
 		//Release the clamps for left and right respectively
-		if (Input.GetKey(KeyCode.Q))
+        if (Input.GetAxis("TriggerR" + playerNumber.ToString()) == 0.0f && leftClamped ==true)
 		{
-			leftClamped = false;
-			Destroy(this.gameObject.GetComponent<ConfigurableJoint>());
-			for(int i = Rope.Length -1 ; i >= 0; i--)
-			{
-				DestroyObject(Rope[i]);
-			}
+            CutRope();
 		}
 		
 	}
 	
 	void FixedUpdate()
 	{
-		if(Input.GetKey(KeyCode.Space))
-		{
-			player.AddForce(fpsCam.transform.forward * 5.0f, ForceMode.Impulse);
-		}
-		
-		if(Input.GetKey(KeyCode.LeftControl))
-		{
-			player.AddForce(-fpsCam.transform.forward * 2.5f, ForceMode.Impulse);
-		}
+        //if (this.gameObject.GetComponent<player_movementHandler_v2>().grounded)
+        //{
+        //    if (Input.GetKey(KeyCode.Space))
+        //    {
+        //        player.AddForce(fpsCam.transform.forward * 5.0f, ForceMode.Impulse);
+        //    }
 
+        //    if (Input.GetKey(KeyCode.LeftControl))
+        //    {
+        //        player.AddForce(-fpsCam.transform.forward * 2.5f, ForceMode.Impulse);
+        //    }
+        //}
 		if (this.transform.position.y < -15.0f) 
 		{
 			this.transform.position = new Vector3 (startPos.x,startPos.y,startPos.z);
-			this.gameObject.GetComponent<Rigidbody>().velocity.Set(0,0,0);
+			this.gameObject.GetComponent<Rigidbody>().AddForce(-this.gameObject.GetComponent<Rigidbody>().velocity, ForceMode.VelocityChange);
+            
+
 			if(leftClamped)
 			{
-				leftClamped = false;
-				Destroy(this.gameObject.GetComponent<ConfigurableJoint>());
-				for(int i = Rope.Length -1 ; i >= 0; i--)
-				{
-					DestroyObject(Rope[i]);
-				}
+                CutRope();
 			}
 		}
 		
 	}
+
+    void CutRope()
+    {
+        leftClamped = false;
+        Destroy(this.gameObject.GetComponent<ConfigurableJoint>());
+        for (int i = Rope.Length - 1; i >= 0; i--)
+        {
+            DestroyObject(Rope[i]);
+        }
+    }
 }
+

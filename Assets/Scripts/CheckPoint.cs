@@ -18,7 +18,7 @@ public class CheckPoint : MonoBehaviour {
 	}
 	void OnCollisionEnter(Collision collision)
 	{
-		if (collision.collider.name == "RigidBodyFPSController") {
+		if (collision.collider.tag == "Player") {
 			counter++;
 			if (counter == track.Length)
 				counter = 0;

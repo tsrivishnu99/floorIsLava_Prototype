@@ -128,10 +128,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="UnityVS.floorIsLava_Prototype.CSharp.Plugins.csproj">
-      <Project>{4EE5DE7A-F3C3-1843-48F3-1DFBD6FDE1BF}</Project>
-      <Name>UnityVS.floorIsLava_Prototype.CSharp.Plugins</Name>
-    </ProjectReference>
     <ProjectReference Include="UnityVS.floorIsLava_Prototype.CSharp.csproj">
       <Project>{FDADE3B9-4435-88CA-8ECE-FDB113026E81}</Project>
       <Name>UnityVS.floorIsLava_Prototype.CSharp</Name>
@@ -139,12 +135,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Editor\CrossPlatformInput\CrossPlatformInputInitialize.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
-    <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />
-    <None Include="Assets\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />
-    <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2013\UnityVS.CSharp.targets" />
 </Project>

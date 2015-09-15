@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{AF897C46-7F24-F1AE-0619-AA83D23071E8}</ProjectGuid>
+	<ProjectGuid>{B169AE48-9341-AA0E-A5F0-6C4B45DC946F}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -53,12 +53,10 @@
      <Compile Include="Assets\Scripts\player_InputHandler.cs" />
      <Compile Include="Assets\Scripts\player_InputHandler_v2.cs" />
      <Compile Include="Assets\Scripts\player_InputHandler_v3.cs" />
+     <Compile Include="Assets\Scripts\player_movementHandler_v1.cs" />
+     <Compile Include="Assets\Scripts\player_movementHandler_v2.cs" />
      <Compile Include="Assets\Warrior Pack Bundle 2 FREE\Code\SmoothFollow.cs" />
      <Compile Include="Assets\Warrior Pack Bundle 2 FREE\Code\WarriorAnimationDemo.cs" />
-     <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
-     <None Include="Assets\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />
-     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
-     <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
@@ -71,10 +69,6 @@
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
  </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="Assembly-CSharp-firstpass-vs.csproj">
-      <Project>{CE10EC81-5C48-DF29-8949-58A5C6EEB94D}</Project>      <Name>Assembly-CSharp-firstpass-vs</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

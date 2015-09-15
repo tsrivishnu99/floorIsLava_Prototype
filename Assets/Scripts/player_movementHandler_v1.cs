@@ -8,7 +8,7 @@ public class player_movementHandler_v1 : MonoBehaviour {
     private Vector3 forwardDirection;
 
     public int playerNumber = 0;
-    public float speed = 6.0f;
+    public float speed = 3.0f;
     public float jumpSpeed = 8.0f;
     public float gravity = 20.0f;
     public float rotationSpeed = 2.0f;
@@ -28,16 +28,17 @@ public class player_movementHandler_v1 : MonoBehaviour {
     {
         if (characterController.isGrounded)
         {
-            moveDirection = new Vector3(Input.GetAxis("Horizontal" + playerNumber.ToString()), 0, Input.GetAxis("Vertical" + playerNumber.ToString()));
+            moveDirection = new Vector3(Input.GetAxis("HorizontalL" + playerNumber.ToString()), 0, Input.GetAxis("VerticalL" + playerNumber.ToString()));
             moveDirection = this.transform.TransformDirection(moveDirection);
             moveDirection *= speed;
 
-            if (Input.GetButton("Jump"))
+            if (Input.GetButton("Jump" + playerNumber.ToString()))
                 moveDirection.y = jumpSpeed;
         }
 
         moveDirection.y -= gravity * Time.deltaTime;
-        characterController.Move(moveDirection * Time.deltaTime);
+        //characterController.SimpleMove(moveDirection * Time.deltaTime);
+        this.transform.Translate(moveDirection * Time.deltaTime);
 
         forwardDirection = this.transform.forward;
         forwardDirection = Quaternion.Euler(new Vector3(Input.GetAxis("VerticalR" + playerNumber.ToString()) * rotationSpeed, 
